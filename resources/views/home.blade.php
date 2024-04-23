@@ -1,29 +1,34 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+ 
+@section('content')
 
-        <title>Laravel</title>
+    <div class="container">
+    
+        <div class="row row-cols-1 row-cols-md-3">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+            @foreach ($movies as $movie)
 
-       
-    </head>
-    <body class="antialiased">
-        
-        @foreach ($movies as $movie)
+            <div class="col">
 
-        <div class="card">
+                <div class="card">
 
-            {{ $movie->title }}
+                    <img class="card-img-top" src="https://picsum.photos/400/200" alt="">
+
+                    <div class="card-body">
+
+                        {{ $movie->title }}
+
+                    </div>
+            
+                </div>
+
+            </div>
+
+            @endforeach
 
         </div>
-            
-        @endforeach
 
-    </body>
-    
-</html>
+    </div>
+
+
+@endsection
