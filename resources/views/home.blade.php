@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('pageTitle', 'Homepage')
  
 @section('content')
 
@@ -8,7 +10,7 @@
 
             @foreach ($movies as $movie)
 
-            <div class="col">
+            <div class="col py-3">
 
                 <div class="card">
 

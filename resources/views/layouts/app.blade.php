@@ -19,7 +19,7 @@
         
         @include('partials.header')
 
-        <main>
+        <main class="min-vh-100 py-3">
             @yield('content')
         </main>
 
